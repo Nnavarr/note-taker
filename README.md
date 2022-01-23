@@ -14,6 +14,9 @@ To create a new note, simply click the add icon "+" on the top right. This will 
 #### View Previous Notes
 When a new note is created, the note will be stored in the left hand column. If a user wants to view the note, they can click on the title within the left hand side. This will generate the noted within the main title/description section.
 
+#### API Endpoint
+To view a JSON style response for previously saved notes, simply add '/api/notes' to the end of the URL.
+
 ### Deployment
 The app is deployed on Heroku and can be found [here](https://note-taker-nnavarr.herokuapp.com/)
 
