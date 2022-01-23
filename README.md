@@ -20,4 +20,4 @@ To view a JSON style response for previously saved notes, simply add '/api/notes
 ### Deployment
 The app is deployed on Heroku and can be found [here](https://note-taker-nnavarr.herokuapp.com/)
 
-![alt text](public\assets\images\note-taker-homepage.png)
+![Screen Shot](.\public\assets\images\note-taker-homepage.png)
