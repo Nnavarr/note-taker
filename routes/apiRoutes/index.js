@@ -1,12 +1,19 @@
 const router = require('express').Router();
 const createNewNote = require('../../lib/notes');
 const uniqid = require('uniqid')
-const db = require('../../db/db.json');
+
+// import db, if empty create empty object
+try {
+    var db = require('../../db/db.json');
+}
+catch(err){
+    var db = {};
+}
 
 // extract existing db.json and return 
 router.get('/notes', (req, res) => {
     // set default value of results to db.json
-    let results = db;
+    let results = db
     res.json(results);
 })
 
