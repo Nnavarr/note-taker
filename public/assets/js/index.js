@@ -54,7 +54,6 @@ const renderActiveNote = () => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
-    console.log(activeNote);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
@@ -90,6 +89,7 @@ const handleNoteDelete = (e) => {
     activeNote = {};
   }
 
+  console.log(`This is the noteId from the handler ${noteId}`);
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -155,7 +155,7 @@ const renderNoteList = async (notes) => {
     return liEl;
   };
 
-  if (jsonNotes.length === 0) {
+  if (jsonNotes.length === 0 || !jsonNotes) {
     noteListItems.push(createLi('No saved Notes', false));
   }
 
