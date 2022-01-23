@@ -1,9 +1,6 @@
 const router = require('express').Router();
 const createNewNote = require('../../lib/notes');
-const notes = require('../../db/db.json');
-const uniqid = require('uniqid');
-
-// import db.json
+const uniqid = require('uniqid')
 const db = require('../../db/db.json');
 
 // extract existing db.json and return 
@@ -19,10 +16,9 @@ router.post('/notes', (req, res) => {
     req.body.id = uniqid();
 
     // post new note
-    const newNote = createNewNote(req.body, notes);
+    const newNote = createNewNote(req.body, db);
     res.json(newNote);
 })
-
 
 // export
 module.exports = router;
